@@ -75,7 +75,7 @@
                                 <rect key="frame" x="0.0" y="211" width="375" height="456"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="95" id="9KF-JO-u0P">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PartyCell" rowHeight="95" id="9KF-JO-u0P" customClass="PartyCell" customModule="PartyRockApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="95"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9KF-JO-u0P" id="10Z-qa-AFU">
@@ -90,8 +90,8 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile Trail" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KcB-f3-YWU">
-                                                    <rect key="frame" x="94" y="25" width="273" height="45"/>
-                                                    <fontDescription key="fontDescription" name="OstrichSans-Bold" family="Ostrich Sans" pointSize="45"/>
+                                                    <rect key="frame" x="94" y="37.5" width="273" height="20"/>
+                                                    <fontDescription key="fontDescription" name="OstrichSans-Bold" family="Ostrich Sans" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -104,6 +104,10 @@
                                                 <constraint firstItem="KcB-f3-YWU" firstAttribute="centerY" secondItem="10Z-qa-AFU" secondAttribute="centerY" id="uW7-3G-DcD"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="videoPreviewImage" destination="8Gi-0b-Qiu" id="ufR-jM-IYA"/>
+                                            <outlet property="videoTitle" destination="KcB-f3-YWU" id="a9T-ue-OZW"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -123,6 +127,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="tableView" destination="BFL-aF-Ml7" id="UOM-Yv-e9C"/>
                         <segue destination="lNy-1k-8al" kind="showDetail" identifier="VideoVC" id="wak-YJ-qmZ"/>
                     </connections>
                 </viewController>
